@@ -20,6 +20,7 @@ export default {
         this.isFullScreen = true;
         screen.enterFullScreen();
       }
+      this.$emit("fullScreenChange", this.isFullScreen);
     }
   }
 };
