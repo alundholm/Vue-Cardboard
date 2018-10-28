@@ -9,6 +9,12 @@ module.exports = {
       chunks: "all"
     }
   },
+  devtool: '#eval-source-map',
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.js' // Use development unminified Vue
+    }
+  },
   entry: './src/js/app.js',
   output: {
     filename: 'bundle.js',
