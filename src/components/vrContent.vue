@@ -31,10 +31,17 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: stretch;
+  height: 100%;
 }
 
 .fill {
   flex: 1;
   overflow: hidden;
+}
+
+.divider {
+  width: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
 }
 </style>
