@@ -1,17 +1,18 @@
 <template>
-  <button @click="enterFullScreen">Enter Full Screen Landscape</button>
+  <full-screen-button class="fullScreenBtn"></full-screen-button>
 </template>
 
 <script>
-import screen from "../js/screen.js";
+import fullScreenButton from "./fullScreenButton.vue";
 export default {
-  methods: {
-    enterFullScreen: function() {
-      screen.enterFullScreen();
-    }
+  components: {
+    fullScreenButton
   }
 };
 </script>
 
-<style>
+<style scoped>
+.fullScreenBtn {
+  float: right;
+}
 </style>
