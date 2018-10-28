@@ -4,7 +4,11 @@
   "description": "A Vue Component Library for creating Cardboard web experiences.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "npm run build",
+    "build": "webpack",
+    "serve": "http-server ./www/ -o -c 1 -a localhost -p 8082",
+    "dev": "webpack --watch",
+    "clean": "rm -r www/build/"
   },
   "repository": {
     "type": "git",
@@ -16,5 +20,20 @@
   "bugs": {
     "url": "https://github.com/alundholm/Vue-Cardboard/issues"
   },
-  "homepage": "https://github.com/alundholm/Vue-Cardboard#readme"
+  "homepage": "https://github.com/alundholm/Vue-Cardboard#readme",
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "http-server": "^0.11.1",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.22.1",
+    "vue-loader": "^15.4.0",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
 }
