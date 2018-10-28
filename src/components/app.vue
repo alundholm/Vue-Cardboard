@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="root">
     <full-screen-button class="fullScreenBtn" @fullScreenChange="updateFullScreen"></full-screen-button>
     <vr-content :vr=isVr>
       <template slot="left">Left</template>
@@ -35,5 +35,13 @@ export default {
   position: absolute;
   right: 10px;
   top: 10px;
+}
+
+.root {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 </style>
