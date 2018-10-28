@@ -1,9 +1,16 @@
 <template>
-  <h1>Hello World</h1>
+  <button @click="enterFullScreen">Enter Full Screen Landscape</button>
 </template>
 
 <script>
-export default {};
+import screen from "../js/screen.js";
+export default {
+  methods: {
+    enterFullScreen: function() {
+      screen.enterFullScreen();
+    }
+  }
+};
 </script>
 
 <style>
